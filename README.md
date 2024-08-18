@@ -41,9 +41,9 @@ Xwapisdk
 ```xml
 
 <dependency>
-  <groupId>icu.xiaowangicu.xiaowang</groupId>
+  <groupId>icu.xwang</groupId>
   <artifactId>Xw-api-sdk</artifactId>
-  <version>0.0.4</version>
+  <version>1.0.0</version>
 </dependency>   
 ```
 
