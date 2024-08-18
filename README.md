@@ -1,5 +1,5 @@
 <p align="center">
-    <img src=https://images.xw998.top/xwapi-images/images/logo.png width=188/>
+    <img src=https://images.xw998.top/xwapi-images/images/015023lWwAmvhFTb4CbC09.png width=188/>
 </p>
 
 <h1 align="center">Xw-API-SDK</h1>
@@ -8,8 +8,6 @@
 <div align="center">
     <img alt="Maven" src="https://raster.shields.io/badge/Maven-3.8.1-red.svg"/>
    <img alt="SpringBoot" src="https://raster.shields.io/badge/SpringBoot-2.7+-green.svg"/>
-  <a href="https://github.com/Iyhsy/Xw-api-sdk" target="_blank"><img src='https://img.shields.io/github/forks/Iyhsy/Xw-api-sdk' alt='GitHub forks' class="no-zoom"></a>
-  <a href="https://github.com/Iyhsy/Xw-api-sdk" target="_blank"><img src='https://img.shields.io/github/stars/Iyhsy/Xw-api-sdk' alt='GitHub stars' class="no-zoom"></a>
 </div>
 ### 目录结构 📝
 
@@ -54,9 +52,9 @@ Xwapisdk
 ```xml
 
 <dependency>
-  <groupId>icu.xiaowangicu.xiaowang</groupId>
+  <groupId>icu.xwang</groupId>
   <artifactId>EasyWeb</artifactId>
-  <version>0.0.6</version>
+  <version>1.0.0</version>
 </dependency>
 ```
 
