@@ -157,12 +157,20 @@ public abstract class BaseService implements ApiService {
      * @return {@link String}
      */
     private <O, T extends ResultResponse> String splicingGetRequest(BaseRequest<O, T> request, String path) {
-        StringBuilder urlBuilder = new StringBuilder(gatewayHost);
-        // urlBuilder最后是/结尾且path以/开头的情况下，去掉urlBuilder结尾的/
-        if (urlBuilder.toString().endsWith("/") && path.startsWith("/")) {
-            urlBuilder.setLength(urlBuilder.length() - 1);
+        StringBuilder urlBuilder = new StringBuilder();
+
+        // 检查path是否已经包含了完整的URL，如果是，则使用path，否则使用gatewayHost拼接path
+        if (path.startsWith("http://") || path.startsWith("https://")) {
+            urlBuilder.append(path);
+        } else {
+            urlBuilder.append(gatewayHost);
+            // urlBuilder最后是/结尾且path以/开头的情况下，去掉urlBuilder结尾的/
+            if (urlBuilder.toString().endsWith("/") && path.startsWith("/")) {
+                urlBuilder.setLength(urlBuilder.length() - 1);
+            }
+            urlBuilder.append(path);
         }
-        urlBuilder.append(path);
+
         if (!request.getRequestParams().isEmpty()) {
             urlBuilder.append("?");
             for (Map.Entry<String, Object> entry : request.getRequestParams().entrySet()) {
@@ -170,11 +178,13 @@ public abstract class BaseService implements ApiService {
                 String value = entry.getValue().toString();
                 urlBuilder.append(key).append("=").append(value).append("&");
             }
-            urlBuilder.deleteCharAt(urlBuilder.length() - 1);
+            urlBuilder.deleteCharAt(urlBuilder.length() - 1); // 移除最后一个"&"
         }
+
         log.info("GET请求路径：{}", urlBuilder);
         return urlBuilder.toString();
     }
+
 
 
     /**

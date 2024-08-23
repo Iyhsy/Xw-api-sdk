@@ -76,7 +76,7 @@ Xwapisdk
 
     ```yml
     # Xw-API 配置
-    Xw:
+    xw:
       api:
         client:
           access-key: 你的 accessKey
@@ -88,8 +88,8 @@ Xwapisdk
   - properties
   
     ```properties
-    Xw.api.client.access-key=你的 accessKey
-    Xw.api.client.secret-key=你的 secretKey
+    xw.api.client.access-key=你的 accessKey
+    xw.api.client.secret-key=你的 secretKey
     ```
 
 #### 4. 使用API服务

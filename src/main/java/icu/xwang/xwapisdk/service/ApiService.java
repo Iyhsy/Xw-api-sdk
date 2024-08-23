@@ -146,4 +146,44 @@ public interface ApiService {
      * @throws ApiException 业务异常
      */
     ResultResponse getWeatherInfo(WeatherRequest request) throws ApiException;
+
+
+    /**
+     * 获取操作系统，浏览器，浏览器版本，访客IP地址，访问时间，访客IP地址天气
+     *
+     * @param xwApiClient Xw api客户端
+     * @param request     要求
+     * @return {@link ResultResponse}
+     * @throws ApiException 业务异常
+     */
+    ResultResponse getVisitorInfo(XwApiClient xwApiClient, VisitorRequest request) throws ApiException;
+
+    /**
+     * 获取操作系统，浏览器，浏览器版本，访客IP地址，访问时间，访客IP地址天气
+     *
+     * @param request 要求
+     * @return {@link ResultResponse}
+     * @throws ApiException 业务异常
+     */
+    ResultResponse getVisitorInfo(VisitorRequest request) throws ApiException;
+
+    /**
+     * IT热榜资讯
+     *
+     * @param xwApiClient Xw api客户端
+     * @param request     要求
+     * @return {@link ResultResponse}
+     * @throws ApiException 业务异常
+     */
+    ResultResponse getItNews(XwApiClient xwApiClient, ItNewsRequest request) throws ApiException;
+
+    /**
+     * IT热榜资讯
+     *
+     * @param request 要求
+     * @return {@link ResultResponse}
+     * @throws ApiException 业务异常
+     */
+    ResultResponse getItNews(ItNewsRequest request) throws ApiException;
+
 }

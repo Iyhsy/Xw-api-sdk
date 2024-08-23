@@ -20,13 +20,6 @@ public abstract class BaseRequest<O, T extends ResultResponse> {
     private Map<String, Object> requestParams = new HashMap<>();
 
     /**
-     * get方法
-     *
-     * @return {@link RequestMethodEnum}
-     */
-    public abstract String getMethod();
-
-    /**
      * 获取路径
      *
      * @return {@link String}
@@ -39,6 +32,14 @@ public abstract class BaseRequest<O, T extends ResultResponse> {
      * @return {@link Class}<{@link T}>
      */
     public abstract Class<T> getResponseClass();
+
+    /**
+     * get方法
+     *
+     * @return {@link RequestMethodEnum}
+     */
+    public abstract String getMethod();
+
 
     @JsonAnyGetter
     public Map<String, Object> getRequestParams() {

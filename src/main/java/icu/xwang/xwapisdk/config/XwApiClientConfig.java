@@ -18,7 +18,7 @@ import org.springframework.context.annotation.Configuration;
  */
 @Data
 @Configuration
-@ConfigurationProperties("Xw.api.client")
+@ConfigurationProperties("xw.api.client")
 @ComponentScan
 public class XwApiClientConfig {
     /**

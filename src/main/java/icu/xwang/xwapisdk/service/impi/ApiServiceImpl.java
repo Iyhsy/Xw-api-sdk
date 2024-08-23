@@ -84,4 +84,25 @@ public class ApiServiceImpl extends BaseService implements ApiService {
     public ResultResponse getWeatherInfo(WeatherRequest request) throws ApiException {
         return request(request);
     }
+
+    @Override
+    public ResultResponse getVisitorInfo(XwApiClient xwApiClient, VisitorRequest request) throws ApiException {
+        return request(xwApiClient, request);
+    }
+
+    @Override
+    public ResultResponse getVisitorInfo(VisitorRequest request) throws ApiException {
+        return request(request);
+    }
+
+    @Override
+    public ResultResponse getItNews(XwApiClient xwApiClient, ItNewsRequest request) throws ApiException {
+        return request(xwApiClient, request);
+    }
+
+    @Override
+    public ResultResponse getItNews(ItNewsRequest request) throws ApiException {
+        return request(request);
+    }
+
 }
