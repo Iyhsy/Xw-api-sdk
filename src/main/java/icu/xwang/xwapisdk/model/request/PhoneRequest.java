@@ -1,28 +1,29 @@
 package icu.xwang.xwapisdk.model.request;
 
 import icu.xwang.xwapisdk.model.enums.RequestMethodEnum;
-import icu.xwang.xwapisdk.model.params.ItNewsParams;
-import icu.xwang.xwapisdk.model.response.ResultResponse;
+import icu.xwang.xwapisdk.model.params.PhoneParams;
+import icu.xwang.xwapisdk.model.response.PhoneReponse;
 import lombok.experimental.Accessors;
 
 /**
  * @Author: XiaoWang
- * @Date: 2024/8/24 00:46
+ * @Date: 2024/8/24 10:32
  * @Version: 1.0
- * @Description: IT热榜资讯
+ * @Description: 获取手机号归属地
  */
 @Accessors(chain = true)
-public class ItNewsRequest extends BaseRequest<ItNewsParams, ResultResponse>{
+public class PhoneRequest extends BaseRequest<PhoneParams, PhoneReponse> {
+
     @Override
     public String getPath() {
-        return "/itNews";
+        return "/PhoneInfo";
     }
-
 
     @Override
-    public Class<ResultResponse> getResponseClass() {
-        return ResultResponse.class;
+    public Class<PhoneReponse> getResponseClass() {
+        return PhoneReponse.class;
     }
+
 
     @Override
     public String getMethod() {

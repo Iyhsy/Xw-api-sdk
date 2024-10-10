@@ -2,7 +2,6 @@ package icu.xwang.xwapisdk.model.request;
 
 import icu.xwang.xwapisdk.model.enums.RequestMethodEnum;
 import icu.xwang.xwapisdk.model.params.IpInfoParams;
-import icu.xwang.xwapisdk.model.response.NameResponse;
 import icu.xwang.xwapisdk.model.response.ResultResponse;
 import lombok.experimental.Accessors;
 
@@ -23,7 +22,6 @@ public class IpInfoRequest extends BaseRequest<IpInfoParams, ResultResponse> {
     /**
      * 获取响应类
      *
-     * @return {@link Class}<{@link NameResponse}>
      */
     @Override
     public Class<ResultResponse> getResponseClass() {

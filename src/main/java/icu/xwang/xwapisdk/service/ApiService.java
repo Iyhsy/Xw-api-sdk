@@ -186,4 +186,41 @@ public interface ApiService {
      */
     ResultResponse getItNews(ItNewsRequest request) throws ApiException;
 
+    /**
+     * 获取手机号归属地
+     *
+     * @param xwApiClient Xw api客户端
+     * @param request     要求
+     * @return {@link ResultResponse}
+     * @throws ApiException 业务异常
+     */
+    ResultResponse getPhoneInfo(XwApiClient xwApiClient, PhoneRequest request) throws ApiException;
+
+    /**
+     * 获取手机号归属地
+     *
+     * @param request 要求
+     * @return {@link ResultResponse}
+     * @throws ApiException 业务异常
+     */
+    ResultResponse getPhoneInfo(PhoneRequest request) throws ApiException;
+
+    /**
+     * 获取实时抖音热榜
+     *
+     * @param xwApiClient Xw api客户端
+     * @param request     要求
+     * @return {@link ResultResponse}
+     * @throws ApiException 业务异常
+     */
+    ResultResponse getDouyinHot(XwApiClient xwApiClient, DouYinHotRequest request) throws ApiException;
+
+    /**
+     * 获取实时抖音热榜
+     *
+     * @param request 要求
+     * @return {@link ResultResponse}
+     * @throws ApiException 业务异常
+     */
+    ResultResponse getDouyinHot(DouYinHotRequest request) throws ApiException;
 }

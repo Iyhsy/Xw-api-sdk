@@ -105,4 +105,24 @@ public class ApiServiceImpl extends BaseService implements ApiService {
         return request(request);
     }
 
+    @Override
+    public ResultResponse getPhoneInfo(XwApiClient xwApiClient, PhoneRequest request) throws ApiException {
+        return request(xwApiClient, request);
+    }
+
+    @Override
+    public ResultResponse getPhoneInfo(PhoneRequest request) throws ApiException {
+        return request(request);
+    }
+
+    @Override
+    public ResultResponse getDouyinHot(XwApiClient xwApiClient, DouYinHotRequest request) throws ApiException {
+        return request(xwApiClient, request);
+    }
+
+    @Override
+    public ResultResponse getDouyinHot(DouYinHotRequest request) throws ApiException {
+        return request(request);
+    }
+
 }

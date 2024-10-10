@@ -11,7 +11,7 @@
     <name>Xw-api-sdk</name>
     <groupId>icu.xwang</groupId>
     <artifactId>Xw-api-sdk</artifactId>
-    <version>1.0.3</version>
+    <version>1.0.4</version>
     <packaging>jar</packaging>
 
     <description>Xw-API 接口开放平台开发者工具包</description>
@@ -28,6 +28,13 @@
             <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
         </license>
     </licenses>
+
+    <scm>
+        <connection>https://github.com/Iyhsy/Xw-api-sdk.git</connection>
+        <developerConnection>scm:git:ssh://git@github.com:Iyhsy/Xw-api-sdk.git
+        </developerConnection>
+        <url>https://github.com/Iyhsy/Xw-api-sdk</url>
+    </scm>
 
     <developers>
         <developer>
@@ -128,7 +135,7 @@
         <dependency>
             <groupId>cn.hutool</groupId>
             <artifactId>hutool-all</artifactId>
-            <version>5.8.16</version>
+            <version>5.8.25</version>
         </dependency>
         <dependency>
             <groupId>com.google.code.gson</groupId>
