@@ -4,10 +4,7 @@ import cn.hutool.http.HttpResponse;
 import icu.xwang.xwapisdk.client.XwApiClient;
 import icu.xwang.xwapisdk.exception.ApiException;
 import icu.xwang.xwapisdk.model.request.*;
-import icu.xwang.xwapisdk.model.response.LoveResponse;
-import icu.xwang.xwapisdk.model.response.PoisonousChickenSoupResponse;
-import icu.xwang.xwapisdk.model.response.RandomWallpaperResponse;
-import icu.xwang.xwapisdk.model.response.ResultResponse;
+import icu.xwang.xwapisdk.model.response.*;
 
 /**
  * @Author: xiaowang
@@ -223,4 +220,61 @@ public interface ApiService {
      * @throws ApiException 业务异常
      */
     ResultResponse getDouyinHot(DouYinHotRequest request) throws ApiException;
+
+    /**
+     * 获取实时哔哩哔哩热榜
+     *
+     * @param xwApiClient Xw api客户端
+     * @param request     请求参数
+     * @return {@link ResultResponse}
+     * @throws ApiException 业务异常
+     */
+    ResultResponse getBiliHot(XwApiClient xwApiClient, BilibiliHotRequest request) throws ApiException;
+
+    /**
+     * 获取实时哔哩哔哩热榜
+     *
+     * @param request 请求参数
+     * @return {@link ResultResponse}
+     * @throws ApiException 业务异常
+     */
+    ResultResponse getBiliHot(BilibiliHotRequest request) throws ApiException;
+
+    /**
+     * 获取实时微博热榜
+     *
+     * @param xwApiClient Xw api客户端
+     * @param request     请求参数
+     * @return {@link ResultResponse}
+     * @throws ApiException 业务异常
+     */
+    ResultResponse getWbHot(XwApiClient xwApiClient, WbHotRequest request) throws ApiException;
+
+    /**
+     * 获取实时微博热榜
+     *
+     * @param request 请求参数
+     * @return {@link ResultResponse}
+     * @throws ApiException 业务异常
+     */
+    ResultResponse getWbHot(WbHotRequest request) throws ApiException;
+
+    /**
+     * 获取平台名称
+     *
+     * @param xwApiClient Xw api客户端
+     * @return 平台名称 {@link String}
+     * @throws ApiException 业务异常
+     */
+    NameResponse getNameInfo(XwApiClient xwApiClient, NameRequest request) throws ApiException;
+
+    /**
+     * 获取平台名称
+     *
+     * @return 平台名称 {@link String}
+     * @throws ApiException 业务异常
+     */
+    NameResponse getNameInfo(NameRequest request) throws ApiException;
+
+
 }

@@ -1,6 +1,7 @@
 package icu.xwang.xwapisdk.model.request;
 
 import icu.xwang.xwapisdk.model.enums.RequestMethodEnum;
+import icu.xwang.xwapisdk.model.params.LoveParams;
 import icu.xwang.xwapisdk.model.response.LoveResponse;
 import icu.xwang.xwapisdk.model.response.NameResponse;
 import lombok.experimental.Accessors;
@@ -12,7 +13,7 @@ import lombok.experimental.Accessors;
  * @Description: 随机情话
  */
 @Accessors(chain = true)
-public class LoveRequest extends BaseRequest<String, LoveResponse> {
+public class LoveRequest extends BaseRequest<LoveParams, LoveResponse> {
 
     @Override
     public String getPath() {

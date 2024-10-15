@@ -1,6 +1,7 @@
 package icu.xwang.xwapisdk.model.request;
 
 import icu.xwang.xwapisdk.model.enums.RequestMethodEnum;
+import icu.xwang.xwapisdk.model.params.DouYinHotParams;
 import icu.xwang.xwapisdk.model.response.ResultResponse;
 import lombok.experimental.Accessors;
 
@@ -11,7 +12,7 @@ import lombok.experimental.Accessors;
  * @Description: 获取实时抖音热榜
  */
 @Accessors(chain = true)
-public class DouYinHotRequest extends BaseRequest<String, ResultResponse> {
+public class DouYinHotRequest extends BaseRequest<DouYinHotParams, ResultResponse> {
     @Override
     public String getPath() {
         return "/douyinHot";

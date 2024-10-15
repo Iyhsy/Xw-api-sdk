@@ -1,6 +1,7 @@
 package icu.xwang.xwapisdk.model.request;
 
 import icu.xwang.xwapisdk.model.enums.RequestMethodEnum;
+import icu.xwang.xwapisdk.model.params.WbHotParams;
 import icu.xwang.xwapisdk.model.response.ResultResponse;
 import lombok.experimental.Accessors;
 
@@ -11,7 +12,7 @@ import lombok.experimental.Accessors;
  * @Description: 微博实时热搜热榜API
  */
 @Accessors(chain = true)
-public class WbHotRequest extends BaseRequest<String, ResultResponse> {
+public class WbHotRequest extends BaseRequest<WbHotParams, ResultResponse> {
     @Override
     public String getPath() {
         return "/WbHot";

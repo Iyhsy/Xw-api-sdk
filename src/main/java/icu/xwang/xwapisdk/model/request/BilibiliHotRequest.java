@@ -1,6 +1,7 @@
 package icu.xwang.xwapisdk.model.request;
 
 import icu.xwang.xwapisdk.model.enums.RequestMethodEnum;
+import icu.xwang.xwapisdk.model.params.BilibiliHotParams;
 import icu.xwang.xwapisdk.model.response.ResultResponse;
 import lombok.experimental.Accessors;
 
@@ -11,7 +12,7 @@ import lombok.experimental.Accessors;
  * @Description: 获取哔哩哔哩全站日榜API
  */
 @Accessors(chain = true)
-public class BilibiliHotRequest extends BaseRequest<String, ResultResponse> {
+public class BilibiliHotRequest extends BaseRequest<BilibiliHotParams, ResultResponse> {
     @Override
     public String getPath() {
         return "/biliHot";

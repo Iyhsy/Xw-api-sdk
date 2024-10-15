@@ -3,10 +3,7 @@ package icu.xwang.xwapisdk.service.impi;
 import icu.xwang.xwapisdk.client.XwApiClient;
 import icu.xwang.xwapisdk.exception.ApiException;
 import icu.xwang.xwapisdk.model.request.*;
-import icu.xwang.xwapisdk.model.response.LoveResponse;
-import icu.xwang.xwapisdk.model.response.PoisonousChickenSoupResponse;
-import icu.xwang.xwapisdk.model.response.RandomWallpaperResponse;
-import icu.xwang.xwapisdk.model.response.ResultResponse;
+import icu.xwang.xwapisdk.model.response.*;
 import icu.xwang.xwapisdk.service.ApiService;
 import icu.xwang.xwapisdk.service.BaseService;
 import lombok.extern.slf4j.Slf4j;
@@ -123,6 +120,36 @@ public class ApiServiceImpl extends BaseService implements ApiService {
     @Override
     public ResultResponse getDouyinHot(DouYinHotRequest request) throws ApiException {
         return request(request);
+    }
+
+    @Override
+    public ResultResponse getBiliHot(XwApiClient xwApiClient, BilibiliHotRequest request) throws ApiException {
+        return request(xwApiClient, request);
+    }
+
+    @Override
+    public ResultResponse getBiliHot(BilibiliHotRequest request) throws ApiException {
+        return request(request);
+    }
+
+    @Override
+    public ResultResponse getWbHot(XwApiClient xwApiClient, WbHotRequest request) throws ApiException {
+        return request(xwApiClient, request);
+    }
+
+    @Override
+    public ResultResponse getWbHot(WbHotRequest request) throws ApiException {
+        return request(request);
+    }
+
+    @Override
+    public NameResponse getNameInfo(XwApiClient xwApiClient, NameRequest request) throws ApiException {
+        return request(xwApiClient, request);
+    }
+
+    @Override
+    public NameResponse getNameInfo(NameRequest request) throws ApiException {
+        return request(new NameRequest());
     }
 
 }
